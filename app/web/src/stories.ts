@@ -74,7 +74,7 @@ export const stories: Story[] = [
   },
   {
     title: "这游戏面板，只有我能看见",
-    hook: "宗门要我跪，系统只问了一句：拒绝？",
+    hook: "面板上的字，旁边的人一个都看不见。",
     chapter: 142,
     mark: "板",
     base: "linear-gradient(165deg, #24143c 0%, #120c1c 52%, #08060c 100%)",
@@ -82,7 +82,7 @@ export const stories: Story[] = [
   },
   {
     title: "从废柴到独步天下，只因我点了否",
-    hook: "十连没出角色，倒是拉来一整支军团。",
+    hook: "宗门要我跪，系统只问了一句：拒绝？",
     chapter: 63,
     mark: "否",
     base: "linear-gradient(155deg, #3a1248 0%, #1a0c28 50%, #0c0814 100%)",
