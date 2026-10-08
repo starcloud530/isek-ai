@@ -1,0 +1,13 @@
+{
+  "name": "isek-ai",
+  "private": true,
+  "workspaces": [
+    "app/web",
+    "app/api"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w app/web",
+    "dev:api": "npm run dev -w app/api",
+    "build:web": "npm run build -w app/web"
+  }
+}
