@@ -41,8 +41,12 @@ export default function App() {
           {stories.map((story) => (
             <li key={story.title}>
               <article className="relative aspect-[3/4] overflow-hidden rounded-md">
-                <div className="absolute inset-0" style={{ background: story.base }} aria-hidden="true" />
-                <div className="absolute inset-0" style={{ background: story.glow }} aria-hidden="true" />
+                <img
+                  src={story.cover}
+                  alt=""
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/10" aria-hidden="true" />
                 <div
                   className="absolute inset-0 opacity-40"
                   style={{
