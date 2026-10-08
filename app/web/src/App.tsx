@@ -37,34 +37,32 @@ export default function App() {
 
       <main id="top" className="px-4 py-4 sm:px-5 sm:py-5">
         <h1 className="sr-only">Isek.ai 首页</h1>
-        <ul className="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
           {stories.map((story) => (
             <li key={story.title}>
-              <article>
+              <article className="relative aspect-[3/4] overflow-hidden rounded-md">
+                <div className="absolute inset-0" style={{ background: story.base }} aria-hidden="true" />
+                <div className="absolute inset-0" style={{ background: story.glow }} aria-hidden="true" />
                 <div
-                  className="relative aspect-[3/4] overflow-hidden rounded-md"
-                  style={{ background: story.base }}
+                  className="absolute inset-0 opacity-40"
+                  style={{
+                    background:
+                      "repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,0.03) 14px 15px)",
+                  }}
                   aria-hidden="true"
-                >
-                  <div className="absolute inset-0" style={{ background: story.glow }} />
-                  <div
-                    className="absolute inset-0 opacity-40"
-                    style={{
-                      background:
-                        "repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,0.03) 14px 15px)",
-                    }}
-                  />
-                  <span className="pointer-events-none absolute -right-1 bottom-0 select-none text-6xl font-black leading-none text-white/12 sm:text-7xl">
-                    {story.mark}
-                  </span>
+                />
+                <span className="pointer-events-none absolute -right-1 bottom-10 select-none text-6xl font-black leading-none text-white/10 sm:text-7xl">
+                  {story.mark}
+                </span>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-2.5 pb-2.5 pt-16">
+                  <h2 className="text-[13px] font-black leading-tight tracking-tight text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.85)] sm:text-sm">
+                    {story.title}
+                  </h2>
+                  <p className="mt-1 line-clamp-2 text-[11px] leading-snug text-zinc-300 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
+                    {story.hook}
+                  </p>
+                  <p className="mt-1.5 text-[10px] text-zinc-400">第{story.chapter}章</p>
                 </div>
-                <h2 className="mt-2 text-sm font-bold leading-snug tracking-tight text-white">
-                  {story.title}
-                </h2>
-                <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-zinc-400">
-                  {story.hook}
-                </p>
-                <p className="mt-1.5 text-[11px] text-zinc-500">第{story.chapter}章</p>
               </article>
             </li>
           ))}
