@@ -40,7 +40,7 @@ export default function App() {
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
           {stories.map((story) => (
             <li key={story.title}>
-              <article className="relative aspect-[3/4] overflow-hidden rounded-md">
+              <article className="relative aspect-[2/3] overflow-hidden rounded-md">
                 <img
                   src={story.cover}
                   alt=""
@@ -58,14 +58,14 @@ export default function App() {
                 <span className="pointer-events-none absolute -right-1 bottom-10 select-none text-6xl font-black leading-none text-white/10 sm:text-7xl">
                   {story.mark}
                 </span>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-2.5 pb-2.5 pt-16">
-                  <h2 className="text-[13px] font-black leading-tight tracking-tight text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.85)] sm:text-sm">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/80 to-transparent px-2.5 pb-2.5 pt-20">
+                  <h2 className="font-['Isek_Title'] origin-left scale-y-125 text-[22px] leading-[1.35] text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] sm:text-[24px]">
                     {story.title}
                   </h2>
-                  <p className="mt-1 line-clamp-2 text-[11px] leading-snug text-zinc-300 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
+                  <p className="mt-1 line-clamp-2 text-[11px] leading-snug text-zinc-400 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
                     {story.hook}
                   </p>
-                  <p className="mt-1.5 text-[10px] text-zinc-400">第{story.chapter}章</p>
+                  <p className="mt-1.5 text-[10px] text-zinc-500">第{story.chapter}章</p>
                 </div>
               </article>
             </li>
